@@ -26,7 +26,7 @@ public class ContainerItemMenu extends AbstractContainerMenu {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                addSlot(new SlotItemHandler(inventory, i * 9 + j, 8 + j * 18, 18 + i * 18));
+                addSlot(new SlotItemHandlerImmutable(inventory, i * 9 + j, 8 + j * 18, 18 + i * 18));
             }
         }
 
