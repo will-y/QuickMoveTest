@@ -8,6 +8,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.ComponentItemHandler;
+import net.neoforged.neoforge.items.ItemHandlerCopySlot;
 import net.neoforged.neoforge.items.SlotItemHandler;
 
 public class ContainerItemMenu extends AbstractContainerMenu {
@@ -26,7 +27,7 @@ public class ContainerItemMenu extends AbstractContainerMenu {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                addSlot(new SlotItemHandlerImmutable(inventory, i * 9 + j, 8 + j * 18, 18 + i * 18));
+                addSlot(new ItemHandlerCopySlot(inventory, i * 9 + j, 8 + j * 18, 18 + i * 18));
             }
         }
 
